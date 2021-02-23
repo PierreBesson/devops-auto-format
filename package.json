@@ -1,0 +1,20 @@
+{
+  "name": "devops-code-auto-indent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier:format": "prettier --write \"{,**/}*.{md,json,yaml}\""
+  },
+  "author": "",
+  "license": "Apache 2",
+  "devDependencies": {
+    "husky": "^4.3.6",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier:format"
+    }
+  }
+}
